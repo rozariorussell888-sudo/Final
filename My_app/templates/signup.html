@@ -1,0 +1,388 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Portal Signup</title>
+
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+
+</head>
+
+
+<body>
+
+
+<div class="Main-Container">
+
+
+<div class="container">
+
+
+
+    <!-- LEFT SIGNUP SECTION -->
+
+
+    <div class="signup-section">
+
+
+        <h1>Sign Up</h1>
+
+
+        <p>
+            Create your student account
+        </p>
+
+
+
+        {% if messages %}
+
+            {% for message in messages %}
+
+                <div class="alert">
+
+                    {{ message }}
+
+                </div>
+
+            {% endfor %}
+
+        {% endif %}
+
+
+
+
+
+
+        <form method="POST" autocomplete="off">
+
+
+            {% csrf_token %}
+
+
+
+
+
+            <div class="input-box">
+
+                <span>👤</span>
+
+                <input
+
+                type="text"
+
+                name="full_name"
+
+                placeholder="Full Name"
+
+                required>
+
+
+            </div>
+
+
+
+
+
+
+            <div class="input-box">
+
+
+                <span>🆔</span>
+
+
+                <input
+
+                type="text"
+
+                name="registration_id"
+
+                placeholder="Registration ID"
+
+                required>
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="input-box">
+
+
+                <span>🏫</span>
+
+
+                <input
+
+                type="text"
+
+                name="department"
+
+                placeholder="Department"
+
+                required>
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="input-box">
+
+
+                <span>✉</span>
+
+
+                <input
+
+                type="email"
+
+                name="email"
+
+                placeholder="UAP Email"
+
+                required>
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="input-box">
+
+
+                <span>📞</span>
+
+
+                <input
+
+                type="text"
+
+                name="phone"
+
+                placeholder="Phone Number"
+
+                required>
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="input-box">
+
+
+                <span>🔒</span>
+
+
+                <input
+
+                type="password"
+
+                name="password"
+
+                placeholder="Password"
+
+                required>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <button
+
+            type="submit"
+
+            class="create-btn">
+
+
+                Create Account
+
+
+            </button>
+
+
+
+
+
+
+
+
+            <div class="login-link">
+
+
+                <span>
+
+                    Already have an account?
+
+                </span>
+
+
+
+
+                <a href="{% url 'login' %}">
+
+                    Login
+
+                </a>
+
+
+
+            </div>
+
+
+
+
+
+        </form>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- RIGHT IMAGE SECTION -->
+
+
+
+    <div class="image-section">
+
+
+
+        <div class="overlay"></div>
+
+
+
+
+
+        <div class="content">
+
+
+
+            <h1>
+
+
+                WELCOME TO
+
+
+                <br>
+
+
+                <span>
+
+                    Student
+
+                </span>
+
+
+                <br>
+
+
+                Portal
+
+
+
+            </h1>
+
+
+
+
+
+
+            <p>
+
+                Create your student account
+
+            </p>
+
+
+
+
+
+
+
+
+            <div class="uap">
+
+
+                UNIVERSITY OF ASIA PACIFIC
+
+
+                <br>
+
+
+                <small>
+
+                    LEARN • GROW • BELONG
+
+                </small>
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

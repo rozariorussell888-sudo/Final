@@ -1,0 +1,175 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Verify OTP</title>
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+
+<body>
+
+
+<div class="Main-Container">
+
+
+<div class="container">
+
+
+<div class="login-section">
+
+
+<h1>
+OTP
+</h1>
+
+
+<p>
+Enter your verification code
+</p>
+
+
+
+{% if error %}
+
+<div class="error-message">
+
+{{error}}
+
+</div>
+
+{% endif %}
+
+
+
+
+<form method="POST">
+
+{% csrf_token %}
+
+
+
+<div class="input-box">
+
+<span>
+🔑
+</span>
+
+
+<input
+
+type="text"
+
+name="otp"
+
+placeholder="Enter OTP"
+
+maxlength="6"
+
+required>
+
+
+</div>
+
+
+
+
+<button class="login-btn">
+
+Verify OTP
+
+</button>
+
+
+
+<div class="signup">
+
+
+<span>
+Wrong email?
+</span>
+
+
+<a href="{% url 'forgot_password' %}" class="signup-btn">
+
+Back
+
+</a>
+
+
+</div>
+
+
+
+</form>
+
+
+</div>
+
+
+
+
+<div class="image-section">
+
+
+<div class="overlay"></div>
+
+
+<div class="content">
+
+<h1>
+
+WELCOME TO
+
+<br>
+
+<span>
+Student
+</span>
+
+<br>
+
+Portal
+
+</h1>
+
+
+<p>
+OTP Verification
+
+</p>
+
+
+<div class="uap">
+
+UNIVERSITY OF ASIA PACIFIC
+
+<br>
+
+<small>
+LEARN • GROW • BELONG
+</small>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

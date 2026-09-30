@@ -1,0 +1,326 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Portal Login</title>
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+</head>
+
+
+<body>
+
+
+<div class="Main-Container">
+
+
+<div class="container">
+
+
+
+    <!-- Login Section -->
+
+
+    <div class="login-section">
+
+
+        <h1>Login</h1>
+
+
+        <p>
+            Enter your account details
+        </p>
+
+
+
+
+        <!-- Error Message -->
+
+        {% if error %}
+
+            <div class="error-message">
+
+                {{ error }}
+
+            </div>
+
+        {% endif %}
+
+
+
+
+        {% if messages %}
+
+            {% for message in messages %}
+
+                <div class="error-message">
+
+                    {{ message }}
+
+                </div>
+
+            {% endfor %}
+
+        {% endif %}
+
+
+
+
+
+
+        <form method="POST" autocomplete="off">
+
+            {% csrf_token %}
+
+
+
+
+            <div class="input-box">
+
+
+                <span>♙</span>
+
+
+                <input
+
+                type="text"
+
+                name="registration_id"
+
+                placeholder="Registration No"
+
+                autocomplete="off"
+
+                required>
+
+
+            </div>
+
+
+
+
+
+
+            <div class="input-box">
+
+
+                <span>🔒</span>
+
+
+                <input
+
+                type="password"
+
+                name="password"
+
+                placeholder="Password"
+
+                autocomplete="new-password"
+
+                required>
+
+
+
+                <span class="eye">
+
+                    ◉
+
+                </span>
+
+
+            </div>
+
+
+
+
+
+
+
+          <a href="{% url 'forgot_password' %}">
+Forgot Password?
+</a>
+
+
+
+
+
+
+            <button
+
+            type="submit"
+
+            class="login-btn">
+
+
+                Login
+
+
+            </button>
+
+
+
+
+
+
+
+            <div class="signup">
+
+
+                <span>
+
+                    Don't have an account?
+
+                </span>
+
+
+
+
+
+                <a href="{% url 'signup' %}" class="signup-btn">
+
+
+                    Sign up
+
+
+                </a>
+
+
+
+
+            </div>
+
+
+
+
+
+        </form>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Right Image Section -->
+
+
+
+    <div class="image-section">
+
+
+
+        <div class="overlay"></div>
+
+
+
+
+
+        <div class="content">
+
+
+
+
+
+            <h1>
+
+
+                WELCOME TO
+
+
+                <br>
+
+
+                <span>
+
+                    Student
+
+                </span>
+
+
+                <br>
+
+
+                Portal
+
+
+
+            </h1>
+
+
+
+
+
+
+            <p>
+
+                Login to access your account
+
+            </p>
+
+
+
+
+
+
+
+
+            <div class="uap">
+
+
+                UNIVERSITY OF ASIA PACIFIC
+
+
+                <br>
+
+
+                <small>
+
+                    LEARN • GROW • BELONG
+
+                </small>
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+</body>
+
+
+</html>

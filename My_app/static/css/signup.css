@@ -1,0 +1,543 @@
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:Arial,sans-serif;
+
+}
+
+
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+
+.Main-Container{
+
+
+    min-height:100vh;
+
+    width:100%;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+
+    background-image:
+
+    linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+
+    url("../images/uap.jpg");
+
+
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+
+}
+
+
+
+
+.container{
+
+
+    width:90%;
+
+
+    max-width:1200px;
+
+
+    height:750px;
+
+
+    display:flex;
+
+
+    border-radius:25px;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+
+
+/* LEFT SIGNUP */
+
+
+.signup-section{
+
+
+    width:50%;
+
+
+    padding:60px 80px;
+
+
+    color:white;
+
+
+
+    background:rgba(0,0,0,0.60);
+
+
+
+    backdrop-filter:blur(15px);
+
+
+    -webkit-backdrop-filter:blur(15px);
+
+
+
+    border:1px solid rgba(255,255,255,0.3);
+
+
+}
+
+
+
+
+
+.signup-section h1{
+
+
+    font-size:55px;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+.signup-section p{
+
+
+    color:#eee;
+
+
+    margin-bottom:40px;
+
+
+}
+
+
+
+
+
+.input-box{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    border-bottom:1px solid white;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+
+.input-box span{
+
+
+    margin-right:15px;
+
+
+}
+
+
+
+
+
+.input-box input{
+
+
+    width:100%;
+
+
+    padding:12px;
+
+
+    background:none;
+
+
+    border:none;
+
+
+    outline:none;
+
+
+    color: #838383;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.input-box input::placeholder{
+
+    color:#838383;
+
+}
+
+
+
+
+
+.create-btn{
+
+
+    width:100%;
+
+
+    padding:15px;
+
+
+    margin-top:20px;
+
+
+    border:none;
+
+
+    border-radius:12px;
+
+
+
+    background:linear-gradient(
+        90deg,
+        #00e3cb,
+        #002cec
+    );
+
+
+
+    color:white;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+.login-link{
+
+
+    margin-top:35px;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:10px;
+
+
+}
+
+
+
+
+.login-link a{
+
+
+    color:#00e3cb;
+
+
+    text-decoration:none;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* RIGHT IMAGE */
+
+
+.image-section{
+
+
+    width:50%;
+
+
+    position:relative;
+
+
+    background-image:url("../images/uap.jpg");
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+}
+
+
+
+
+.overlay{
+
+
+    position:absolute;
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+
+    background:rgba(0,0,0,0.55);
+
+
+}
+
+
+
+
+
+.content{
+
+
+    position:relative;
+
+
+    z-index:2;
+
+
+    color:white;
+
+
+    padding:90px 60px;
+
+
+}
+
+
+
+
+
+.content h1{
+
+
+    font-size:60px;
+
+
+    line-height:1.1;
+
+
+}
+
+
+
+
+
+.content h1 span{
+
+
+    color:#a855f7;
+
+
+}
+
+
+
+
+
+.content p{
+
+
+    margin-top:25px;
+
+
+    font-size:20px;
+
+
+}
+
+
+
+
+
+.uap{
+
+
+    position:absolute;
+
+
+    bottom:-420px;
+
+
+    font-size:20px;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+.uap small{
+
+
+    letter-spacing:4px;
+
+
+    color:#ccc;
+
+
+}
+.alert{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+    border-radius:10px;
+
+    background:rgba(255,0,0,0.2);
+
+    color:white;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,0.3);
+
+}
+
+.otp-box{
+
+    display:flex;
+
+    align-items:center;
+
+    border-bottom:1px solid white;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.otp-box span{
+
+    color:white;
+
+    margin-right:15px;
+
+}
+
+
+
+.otp-box input{
+
+    width:100%;
+
+    padding:15px 5px;
+
+    background:transparent;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    font-size:17px;
+
+}
+
+
+
+.otp-btn{
+
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:20px;
+
+
+    border-radius:10px;
+
+    border:1px solid white;
+
+
+    background:transparent;
+
+    color:white;
+
+
+    cursor:pointer;
+
+}

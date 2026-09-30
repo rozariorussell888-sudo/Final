@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Signup OTP</title>
+    <link rel="stylesheet" href="{% static 'css/signup_otp.css' %}">
+</head>
+
+<body>
+
+    <div class="Main-Container">
+        <div class="container">
+
+            <!-- Left Form Section -->
+            <div class="login-section">
+                <h1>SIGNUP OTP</h1>
+                <p>Enter the verification code sent to your UAP email</p>
+
+                {% if error %}
+                    <div class="error-message">
+                        {{ error }}
+                    </div>
+                {% endif %}
+
+                <form method="POST">
+                    {% csrf_token %}
+
+                    <div class="input-box">
+                        <span>🔑</span>
+                        <input
+                            type="text"
+                            name="otp"
+                            placeholder="Enter 6-digit OTP"
+                            maxlength="6"
+                            required>
+                    </div>
+
+                    <button type="submit" class="login-btn">
+                        Verify & Complete Signup
+                    </button>
+
+                    <div class="signup">
+                        <span>Wrong email or details?</span>
+                        <!-- Back button redirects to Signup Page -->
+                        <a href="{% url 'signup' %}" class="signup-btn">
+                            Back
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right Image Section -->
+            <div class="image-section">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h1>
+                        JOIN THE
+                        <br>
+                        <span>Student</span>
+                        <br>
+                        Portal
+                    </h1>
+
+                    <p>Signup Verification</p>
+
+                    <div class="uap">
+                        UNIVERSITY OF ASIA PACIFIC
+                        <br>
+                        <small>LEARN • GROW • BELONG</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
